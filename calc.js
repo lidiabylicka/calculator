@@ -22,18 +22,32 @@ buttons.forEach((button) =>
   button.addEventListener("click", () => countMe(button))
 );
 
-//EVAL FUNCTION IS THA MAN!!!
-//onto the bright dark mode
+//EVAL FUNCTION !!!
+//onto the bright / dark mode:
 
 const toggle = document.getElementById("toggleBright");
 const body = document.querySelector("body");
-const calc = document.getElementsByClassName("calc");
-console.log(calc);
+const calc = document.querySelector(".calcDark");
+const sign = document.querySelector(".sign");
+
 toggle.addEventListener("click", function () {
   this.classList.toggle("bi-moon");
-  if (toggle.classList == "bi bi-brightness-high-fill") {
-    calc.className = "calcBright";
+});
+
+toggle.addEventListener("click", function () {
+  if (toggle.classList.contains("bi-moon")) {
+    buttons.forEach((button) => (button.className = "button"));
+    calc.className = "calcDark";
+    body.className = "dark";
+    screen.className = "result";
+    sign.className = "sign";
+    clear.className = "clear";
   } else {
-    calc.className = "calc";
+    buttons.forEach((button) => (button.className = "buttonBright"));
+    calc.className = "calcBright";
+    body.className = "bright";
+    screen.className = "brightResult";
+    sign.className = "signBright";
+    clear.className = "clearBright";
   }
 });
