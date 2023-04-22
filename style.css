@@ -1,4 +1,4 @@
-body {
+.dark {
   display: flex;
   flex-direction: column;
   font-family: "Orbitron", "Courier New", Courier, monospace;
@@ -9,24 +9,40 @@ body {
   align-items: center;
   background-color: black;
   margin: 2%;
+  transition: ease-out;
 }
-.calc {
+.bright {
+  display: flex;
+  flex-direction: column;
+  font-family: "Orbitron", "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: 30px;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  color: brown;
+  margin: 2%;
+}
+.calcDark {
   padding: 1%;
   display: flex;
   flex-direction: column;
   border: solid 1px bisque;
   border-radius: 10px;
-  box-shadow: -1em 0 0.4em olive;
+  box-shadow: -1em 0.4em 0.4em 0.4em rgb(151, 127, 120);
   height: 60vh;
   width: 30vw;
 }
 .calcBright {
+  background-color: beige;
+  color: rgb(54, 28, 14);
   padding: 1%;
   display: flex;
   flex-direction: column;
-  border: solid 1px bisque;
+  border: solid 1px black;
   border-radius: 10px;
-  box-shadow: -1em 0 0.4em red;
+  box-shadow: -1em 0.4em 0.4em 0.4em rgb(160, 119, 106);
   height: 60vh;
   width: 30vw;
 }
@@ -35,6 +51,19 @@ body {
   border: solid 1px pink;
   border-radius: 10px;
   color: greenyellow;
+  width: 98%;
+  height: 15%;
+  display: flex;
+  justify-content: right;
+  align-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.brightResult {
+  font-family: "Orbitron", "Courier New", Courier, monospace;
+  border: solid 1px pink;
+  border-radius: 10px;
+  color: rgb(49, 77, 8);
   width: 98%;
   height: 15%;
   display: flex;
@@ -69,6 +98,23 @@ button:active {
   background-color: greenyellow;
   box-shadow: 0.2em 0.1em 0.1em olive;
 }
+.buttonBright {
+  font-family: "Orbitron", "Courier New", Courier, monospace;
+  margin: 1%;
+  border-radius: 50px;
+  border: solid 1px rgb(151, 0, 25);
+  background-color: rgb(238, 238, 238);
+  color: rgb(181, 61, 61);
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
 .buttons div {
   margin: 1%;
   display: flex;
@@ -76,18 +122,24 @@ button:active {
   justify-content: space-around;
 }
 
-#sign {
-  font-size: 0.3em;
+.sign {
+  font-size: 10px;
   color: greenyellow;
 }
-#clear {
+.signBright {
+  font-size: 10px;
+  color: olive;
+}
+.clear {
   display: flex;
-  width: 98%;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  font-size: large;
 }
-#clear {
-  background-color: red;
+
+.clearBright {
+  background-color: rgb(255, 200, 157);
 }
 #clear:hover {
   background-color: brown;
@@ -95,19 +147,19 @@ button:active {
 i {
   cursor: pointer;
   font-size: xx-large;
-  color: wheat;
+  color: rgb(161, 142, 105);
 }
-#switchMode2 {
-  font-family: "Orbitron", "Courier New", Courier, monospace;
-  background-color: beige;
-  border: 1px solid black;
-  color: black;
-  border-radius: 50px;
-  width: max-content;
-}
+
 .footer {
   padding: 1em;
   width: 30vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.toggle {
+  cursor: pointer;
+  display: flex;
+  width: 120px;
+  height: 60px;
+  border-radius: 10%;
 }
