@@ -131,17 +131,27 @@ button:active {
   color: olive;
 }
 .clear {
+  font-family: "Orbitron", "Courier New", Courier, monospace;
+  margin: 1%;
+  border-radius: 50px;
+  border: solid 1px pink;
+  background-color: black;
+  color: white;
+  width: 30%;
+  height: 100%;
   display: flex;
-  width: 100%;
+  flex-direction: row;
   justify-content: center;
+  align-content: center;
   align-items: center;
-  font-size: large;
+  font-size: 20px;
 }
 
 .clearBright {
   background-color: rgb(255, 200, 157);
+  font-size: 20px;
 }
-#clear:hover {
+.clear:hover {
   background-color: brown;
 }
 i {
