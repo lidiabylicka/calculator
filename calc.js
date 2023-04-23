@@ -32,9 +32,6 @@ const sign = document.querySelector(".sign");
 
 toggle.addEventListener("click", function () {
   this.classList.toggle("bi-moon");
-});
-
-toggle.addEventListener("click", function () {
   if (toggle.classList.contains("bi-moon")) {
     buttons.forEach((button) => (button.className = "button"));
     calc.className = "calcDark";
@@ -51,3 +48,21 @@ toggle.addEventListener("click", function () {
     clear.className = "clearBright";
   }
 });
+
+// toggle.addEventListener("click", function () {
+//   if (toggle.classList.contains("bi-moon")) {
+//     buttons.forEach((button) => (button.className = "button"));
+//     calc.className = "calcDark";
+//     body.className = "dark";
+//     screen.className = "result";
+//     sign.className = "sign";
+//     clear.className = "clear";
+//   } else {
+//     buttons.forEach((button) => (button.className = "buttonBright"));
+//     calc.className = "calcBright";
+//     body.className = "bright";
+//     screen.className = "brightResult";
+//     sign.className = "signBright";
+//     clear.className = "clearBright";
+//   }
+// });
